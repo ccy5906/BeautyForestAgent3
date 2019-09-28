@@ -21,5 +21,15 @@ namespace BeautyForestAgent
             MessageBox.Show("건의사항이 보내졌습니다.", "건의사항 발송");
             this.Close();
         }
+
+        private void tsbtnFont_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void tsbtnColor_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
