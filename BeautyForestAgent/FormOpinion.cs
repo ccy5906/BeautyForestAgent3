@@ -24,11 +24,31 @@ namespace BeautyForestAgent
 
         private void tsbtnFont_Click(object sender, EventArgs e)
         {
-           
+            DialogResult result = this.fontDlg.ShowDialog(); // 사용자입력 대기, 코드 멈춤
+            switch (result)
+            {
+                case DialogResult.OK:
+                    this.richBox.SelectionFont = this.fontDlg.Font;  //selectionFont는 선택한 부분
+                    break;
+                case DialogResult.Cancel:
+                    MessageBox.Show("폰트 변경을 취소하셨습니다", "알림");
+                    break;
+            }
+
         }
 
         private void tsbtnColor_Click(object sender, EventArgs e)
         {
+            DialogResult result = this.colorDlg.ShowDialog();  // 사용자입력 대기, 코드 멈춤
+            switch (result)
+            {
+                case DialogResult.OK:
+                    this.richBox.SelectionColor = this.colorDlg.Color;
+                    break;
+                case DialogResult.Cancel:
+                    MessageBox.Show("색 변경을 취소하셨습니다", "알림");
+                    break;
+            }
 
         }
     }
